@@ -274,3 +274,11 @@ async function viewOffers() {
 
     listing.innerHTML = result;
 }
+function goHome() {
+
+    document.getElementById("farmerDashboard").style.display = "none";
+
+    document.getElementById("buyerDashboard").style.display = "none";
+
+    document.getElementById("loginSection").style.display = "block";
+}
