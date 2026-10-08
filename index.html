@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farm2Market</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🌾 Farm2Market</h1>
+    <p>Connecting Farmers Directly With Buyers</p>
+    <p>Sell fresh produce at fair prices. Buy directly from local farmers.</p>
+</header>
+
+<main>
+
+    <!-- LOGIN -->
+    <section id="loginSection" class="login-section">
+
+        <h2>Welcome to Farm2Market</h2>
+
+        <p>Choose your role to continue</p>
+
+        <div class="buttons">
+
+            <button onclick="loginFarmer()">
+                👨‍🌾 Farmer Login
+            </button>
+
+            <button onclick="loginBuyer()">
+                🛒 Buyer Login
+            </button>
+
+        </div>
+
+    </section>
+    <div class="features">
+
+    <div class="feature-card">
+        <h3>🌾 Direct Selling</h3>
+        <p>Farmers can publish their produce directly.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>🛒 Easy Buying</h3>
+        <p>Buyers can search for available crops.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>🤝 Fair Offers</h3>
+        <p>Buyers can send price offers directly to farmers.</p>
+    </div>
+
+</div>
+
+
+    <!-- FARMER DASHBOARD -->
+    <section id="farmerDashboard" class="dashboard">
+
+        <h2>👨‍🌾 Farmer Dashboard</h2>
+
+        <input type="text" id="crop" placeholder="Crop name">
+
+        <input type="number" id="quantity" placeholder="Quantity (kg)">
+
+        <input type="number" id="price" placeholder="Expected price per kg">
+
+        <input type="text" id="location" placeholder="Location">
+
+        <button onclick="publishProduce()">
+            Publish Produce
+        </button>
+
+        <br><br>
+
+        <button onclick="viewOffers()">
+            👀 View Offers
+        </button>
+
+        <div id="listing"></div>
+
+    </section>
+
+
+    <!-- BUYER DASHBOARD -->
+    <section id="buyerDashboard" class="dashboard">
+
+        <h2>🛒 Buyer Dashboard</h2>
+
+        <input type="text" id="searchCrop" placeholder="Search crop">
+
+        <button onclick="searchProduce()">
+            Search Produce
+        </button>
+
+        <div id="buyerResults"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Farm2Market © 2026</p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
